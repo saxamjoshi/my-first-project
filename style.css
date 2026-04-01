@@ -28,6 +28,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 18px 40px;
+    flex-wrap: wrap;
 }
 
 .logo-section {
@@ -83,6 +84,7 @@ body {
 
 .navbar ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 12px 40px;
 }
@@ -100,11 +102,9 @@ body {
 
 /* HERO */
 
-
-.hero-overlay {
-    position: relative;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
+.hero img {
+    width: 100%;
+    height: auto;
 }
 
 /* ALERT */
@@ -214,4 +214,71 @@ body {
     margin-top: 40px;
     font-size: 13px;
     opacity: 0.7;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px){
+
+.main-container {
+grid-template-columns: 1fr;
+}
+
+.footer-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+@media (max-width: 768px){
+
+.top-strip {
+padding: 6px 15px;
+}
+
+.main-header {
+flex-direction: column;
+align-items: flex-start;
+gap: 15px;
+padding: 15px;
+}
+
+.navbar ul {
+padding: 10px;
+}
+
+.main-container {
+padding: 20px;
+}
+
+.alert-bar {
+padding: 10px 15px;
+}
+
+.footer {
+padding: 30px 15px;
+}
+
+.footer-grid {
+grid-template-columns: 1fr;
+}
+
+}
+
+@media (max-width: 480px){
+
+.title-block h1 {
+font-size: 18px;
+}
+
+.navbar li {
+font-size: 12px;
+margin-right: 12px;
+}
+
+.btn {
+padding: 6px 12px;
+font-size: 12px;
+}
+
 }
