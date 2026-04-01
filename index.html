@@ -1,225 +1,271 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GST Portal Layout Clone</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Segoe UI", sans-serif;
+}
 
-<!-- ===== TOP STRIP ===== -->
-<div class="top-strip">
-    <div class="strip-left">Skip to Main Content</div>
-    <div class="strip-right">A+ &nbsp; A-</div>
-</div>
+html, body {
+overflow-x: hidden;
+}
 
-<!-- ===== HEADER ===== -->
-<header class="main-header">
-    <div class="logo-section">
-        <div class="emblem">
-            <img src="threelions.svg" alt="">
-        </div>
-        <div class="title-block">
-            <h1>Goods and Services Tax</h1>
-            <p>Government of India Portal</p>
-        </div>
-    </div>
+body {
+background: #f2f6fb;
+color: #1c2b3a;
+}
 
-    <div class="auth-section">
-        <button class="btn primary">REGISTER</button>
-        <button class="btn outline">LOGIN</button>
-    </div>
-</header>
+/* TOP STRIP */
+.top-strip {
+background: #0c2e57;
+color: #fff;
+display: flex;
+justify-content: space-between;
+padding: 6px 40px;
+font-size: 13px;
+}
 
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar">
-    <ul>
-        <li>Home</li>
-        <li>Services</li>
-        <li>GST Law</li>
-        <li>Downloads</li>
-        <li>Search Taxpayer</li>
-        <li>Help & Facilities</li>
-        <li>e-Invoice</li>
-        <li>News</li>
-    </ul>
-</nav>
+/* HEADER */
+.main-header {
+background: linear-gradient(135deg, #143a66, #0f2f55);
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 18px 40px;
+flex-wrap: wrap;
+}
 
-<!-- ===== HERO BANNER ===== -->
-<section class="hero">
-    <div class="hero-overlay">
-        <img src="goodstax.png" height="280" width=100% alt="">
-    </div>
-</section>
+.logo-section {
+display: flex;
+align-items: center;
+}
 
-<!-- ===== ALERT STRIP ===== -->
-<div class="alert-bar">
-    Regular taxpayers can opt for the Composition Scheme for FY 2026-27.
-</div>
+.emblem {
+width: 30px;
+height: 35px;
+margin-right: 15px;
+}
 
-<!-- ===== MAIN GRID ===== -->
-<section class="main-container">
+.title-block h1 {
+font-size: 22px;
+font-weight: 600;
+}
 
-    <!-- LEFT SIDE -->
-    <div class="left-panel">
+.title-block p {
+font-size: 13px;
+opacity: 0.8;
+}
 
-        <div class="card-header">
-            <h3>News and Updates</h3>
-            <span>VIEW ALL</span>
-        </div>
-        <div class="card">
+.btn {
+padding: 8px 18px;
+margin-left: 10px;
+cursor: pointer;
+border-radius: 4px;
+font-weight: 600;
+border: none;
+transition: 0.3s;
+}
 
-            <div class="news-item">
-                <h4>
-Facility for Withdrawal from Rule 14A</h4>
-                <p>Feb 21st, 2026</p>
-            </div>
+.btn.primary {
+background: white;
+color: #143a66;
+}
 
-            <div class="news-item">
-                <h4>Attention : Update on Advisory on Interest Collection and Related Enhancements in GSTR-3B</h4>
-                <p>feb 19th, 2026</p>
-            </div>
+.btn.outline {
+background: transparent;
+border: 1px solid white;
+color: white;
+}
 
-            <div class="news-item">
-                <h4>Gross and Net GST revenue collections for the month of Jan, 2026</h4>
-                <p>feb 1st, 2026</p>
-            </div>
-        </div>
+/* NAVBAR */
+.navbar {
+background: #1b4578;
+}
 
-        <!-- DUE DATES TABLE -->
-        <div class="card">
-            <div class="card-header">
-                <h3>Upcoming Due Dates</h3>
-                <span>DOWNLOAD PDF</span>
-            </div>
+.navbar ul {
+display: flex;
+flex-wrap: wrap;
+list-style: none;
+padding: 12px 40px;
+}
 
-            <table class="due-table">
-                <tr>
-                    <th>Monthly</th>
-                    <th>Quarterly</th>
-                    <th colspan="2">Other Due Dates</th>
-                </tr>
-                <tr>
-                    <td>GSTR-3B(Jan,2026) <br>
-                    <h6>Feb 20th,2026 </h6></td>
-                    <td>GSTR-3B(Jan-Mar,2026) <br>
-                    <h6>Apr 22nd,24th,2026</h6></td>
-                    <td>GSTR-5(Jan,2026) <br>
-                    <h6>Feb 13th,2026 </h6></td>
-                    <td>GSTR-5A(Jan,2026) <br>
-                    <h6>Feb 20th,2026 </h6></td>
-                </tr>
-                <tr>
-                    <td>GSTR-1(Jan,2026) <br>
-                    <h6>Feb 11th,2026 </h6></td>
-                    <td>GSTR-1(Jan-Mar,2026) <br>
-                    <h6>Apr 13th,2026</td>
-                    <td>GSTR-6(Jan,2026) <br>
-                    <h6>Feb 13th,2026 </h6></td>
-                    <td>GSTR-7(Jan,2026) <br>
-                    <h6>Feb 10th,2026 </h6></td>
-                </tr>
-                <tr>
-                    <td>IFF(Optional) (Jan,2026) <br>
-                    <h6>Feb 13th,2026 </h6></td>
-                    <td>CMP-08 (Jan-Mar,2026) <br>
-                    <h6>Apr 18th,2026</h6></td>
-                    <td>GSTR-8(Jan,2026) <br>
-                    <h6>Feb 10th,2026 </h6></td>
-                    <td>RFD-10<br>
-                    <h6>2 years from the last day of the quarter in which supply was received</h6></td>
-                </tr>
-            </table>
-        </div>
+.navbar li {
+margin-right: 25px;
+color: white;
+font-size: 14px;
+cursor: pointer;
+}
 
-    </div>
+/* HERO */
+.hero img {
+width: 100%;
+height: auto;
+}
 
-    <!-- RIGHT SIDE -->
-    <div class="right-panel">
-        <h3>Popular Help Topics</h3>
-        <div class="card">
+/* ALERT */
+.alert-bar {
+background: #f7d774;
+padding: 10px 40px;
+font-size: 14px;
+}
 
-            <ul class="help-list">
-                <li>How do I register with GST?</li>
-                <li>How do I apply for refund?</li>
-                <li>How do I file returns?</li>
-                <li>How can I use offline tool?</li>
-                <li>How do I file an appeal?</li>
-            </ul>
-        </div>
+/* MAIN GRID */
+.main-container {
+display: grid;
+grid-template-columns: 2fr 1fr;
+gap: 30px;
+padding: 40px 20px;
+}
 
-        <div class="card">
-            <h3>GST Media</h3>
-            <div class="video-placeholder">
-                <img src="youtube.jpg" height="125px" alt="">
-            </div>
-            <h6>
-                <a href="">
-                    Know more about Map-based Geocoding in the Registration process. Watch the video.
-                    Uploaded On: Mar 1st, 2024
-                </a>
-            </h6>
-            <div class="video-placeholder">
-                <img src="youtube.jpg" height="125px" alt="">
-            </div>
-             <h6>
-                <a href="">
-                    How to validate Digital Signature affixed to the downloaded document from the GST Portal?
-Uploaded On: Feb 27th, 2024
-                </a>
-            </h6>
-        </div>
+.card {
+background: white;
+border-radius: 8px;
+padding: 20px;
+margin-bottom: 30px;
+box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
 
-    </div>
+.card-header {
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+}
 
-</section>
+.news-item {
+padding: 12px 0;
+border-bottom: 1px solid #eee;
+}
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
+/* TABLE */
+.due-table {
+width: 100%;
+border-collapse: collapse;
+border: 2px solid rgb(15, 15, 48);
+}
 
-    <div class="footer-grid">
+.due-table th {
+background: #143a66;
+color: white;
+padding: 10px;
+border: 1px solid white;
+}
 
-        <div>
-            <h4>About GST</h4>
-            <p>GST Council Structure</p>
-            <p>GST History</p>
-        </div>
+.due-table td {
+padding: 10px;
+border: 1px solid rgb(15, 15, 48);
+text-align: center;
+}
 
-        <div>
-            <h4>Website Policies</h4>
-            <p>Website Policy</p>
-            <p>Terms and Conditions</p>
-            <p>Disclaimer</p>
-        </div>
+/* HELP */
+.help-list {
+list-style: none;
+}
 
-        <div>
-            <h4>Related Sites</h4>
-            <p>CBIC</p>
-            <p>State Tax Websites</p>
-            <p>National Portal</p>
-        </div>
+.help-list li {
+padding: 10px 0;
+border-bottom: 1px solid #eee;
+}
 
-        <div>
-            <h4>Help and Facilities</h4>
-            <p>System Requirements</p>
-            <p>GST Knowledge Portal</p>
-            <p>Site Map</p>
-        </div>
+/* VIDEO */
+.video-placeholder {
+height: 120px;
+background: #ffffff;
+border-radius: 6px;
+margin-top: 12px;
+}
 
-        <div>
-            <h4>Contact Us</h4>
-            <p>Help Desk: 1800-000-000</p>
-            <p>Grievance Portal</p>
-        </div>
+/* FOOTER */
+.footer {
+background: #0f2f55;
+color: white;
+padding: 50px 20px 20px;
+}
 
-    </div>
+.footer-grid {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 40px;
+}
 
-    <div class="footer-bottom">
-        © 2026 Goods and Services Tax Network
-    </div>
+.footer-bottom {
+text-align: center;
+margin-top: 40px;
+font-size: 13px;
+opacity: 0.7;
+}
 
-</footer>
+/* ================= RESPONSIVE ================= */
 
-</body>
-</html>
+@media (max-width:1024px){
+
+.main-container{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.top-strip{
+padding:6px 15px;
+}
+
+.main-header{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+padding:15px;
+}
+
+.navbar ul{
+padding:10px;
+}
+
+.main-container{
+padding:20px 15px;
+}
+
+.alert-bar{
+padding:10px 15px;
+}
+
+.footer{
+padding:30px 15px;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.due-table{
+display:block;
+overflow-x:auto;
+}
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+.title-block h1{
+font-size:18px;
+}
+
+.navbar li{
+font-size:12px;
+margin-right:12px;
+}
+
+.btn{
+padding:6px 12px;
+font-size:12px;
+}
+
+}
